@@ -1,0 +1,185 @@
+form{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 200px;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #6d316d;
+    background-color: rgb(194, 200, 233);
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+#numInput{
+    padding-top: 20px;
+    width: 60%;
+    align-self: center;
+}
+
+#number {
+    width: 70px;
+    border: solid 2px #89bcc5;
+    border-radius: 5px;
+    color:rgb(102, 102, 102);
+}
+
+#coinInput {
+    padding-top: 20px;
+    width: 60%;
+    align-self: center;
+}
+
+#coins {
+    width: 90px;
+    border: solid 2px #89bcc5;
+    border-radius: 5px;
+    color:rgb(102, 102, 102);
+}
+
+#makeMoney {
+    margin-top: 20px;
+    align-self: center;
+}
+
+#Penny {
+    background:rgb(190, 106, 27);
+    background-image: linear-gradient(45deg, rgb(184,115,51), #935f42, #764c35, rgb(184,115,51));
+    border: solid 2px rgb(131, 76, 14);
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+#Nickel {
+    background: rgb(158, 152, 152);
+    background-image: linear-gradient(65deg, silver, #727272, #807b78, silver);
+    border: solid 2px rgb(121, 119, 119);
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+#Dime {
+    background: rgb(212, 211, 211);
+    background-image: linear-gradient(35deg, rgb(241, 239, 239), #8b8b8b, #bdbdbd, rgb(241, 239, 239));
+    border: solid 2px darkgrey;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#Quarter {
+    background: silver;
+    background-image: linear-gradient(85deg, rgb(219, 212, 212), #b6aeae, #807b78, rgb(245, 245, 245));
+    border: solid 2px rgb(102, 102, 102);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.para, #Penny, #Nickel, #Dime, #Quarter {
+    align-self: center;
+    text-shadow: -1px -1px 1px rgb(206, 186, 186), 1px 1px 1px rgb(65, 52, 52);
+    color: #968b7f;
+    font-weight: 500;
+    
+}
+
+#coinRow {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+#total {
+    height: 70px;
+    width: 300px;
+    border: solid 3px rgb(194, 200, 233);
+    border-radius: 5px;
+    color: #89bcc5;
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+}
+
+@import "compass/css3";
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+html, body {
+  background-color: #e7e7ea;
+  font-family: "Inconsolata", monospace;
+  font-size: 1.13em;
+  font-weight: bold;
+}
+
+
+.btn {
+  color: rgb(16,24,50);
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 0.075em;
+  padding: .8em 1em;
+  margin: auto 2em;
+  position: relative;
+  align-self: center;
+  text-transform: uppercase;
+  border: 3px #89bcc5 solid;
+  border-image: linear-gradient(45deg, #89bcc5  0%, #6d316d 100%);
+  border-image-slice: 1 1 0 0;
+  z-index: 1;
+  box-shadow: -0.5em .5em transparentize(rgb(16,24,50),1);
+  transform-origin: left bottom;
+  
+}
+
+ .cta {
+  background-color: #b5d8dd; 
+  background-image: (linear-gradient(45deg, #89bcc5  0%, #6d316d 100%));
+  border-image: linear-gradient(45deg, lighten(#89bcc5 ,20%) 0%, lighten(#6d316d,20%) 100%);
+  border-image-slice: 1;
+  color: white;
+ }
+
+ 
+  .cta:before {
+    border-image-slice: 1;
+    background-image: (linear-gradient(45deg, #89bcc5  0%, adjust-hue(#89bcc5 ,10%) 100%));
+    left: -0.75em;
+    top: .15em;
+  }
+  
+  .cta:after {
+    border-image-slice: 1;
+    background-image: (linear-gradient(45deg, #89bcc5  0%, #6d316d 100%));
+    bottom: -0.75em;
+    right: .15em;
+  }
+  
+  .cta:hover {
+    background: white;
+    border-image: linear-gradient(45deg, #89bcc5  0%, #6d316d 100%);
+    border-image-slice: 1;
+    color: #89bcc5;
+  }
+   
+ .cta:before {
+      height: 100%;
+    }
+.cta:after {
+      width: 100%;
+    }
+  
+
+ 
