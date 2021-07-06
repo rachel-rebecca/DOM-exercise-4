@@ -1,5 +1,4 @@
 form{
-    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     height: 200px;
     width: 400px;
     margin: auto;
@@ -61,25 +60,20 @@ form{
 }
 
 #Dime {
-    background: rgb(212, 211, 211);
-    background-image: linear-gradient(35deg, rgb(241, 239, 239), #8b8b8b, #bdbdbd, rgb(241, 239, 239));
+    background: url(fdr-105x105.png);
     border: solid 2px darkgrey;
     border-radius: 50%;
     height: 100px;
     width: 100px;
-    display: flex;
-    justify-content: center;
+   
 }
 
 #Quarter {
-    background: silver;
-    background-image: linear-gradient(85deg, rgb(219, 212, 212), #b6aeae, #807b78, rgb(245, 245, 245));
+    background: url(washington-200x200.png);
     border: solid 2px rgb(102, 102, 102);
     border-radius: 50%;
     height: 200px;
     width: 200px;
-    display: flex;
-    justify-content: center;
 }
 
 
