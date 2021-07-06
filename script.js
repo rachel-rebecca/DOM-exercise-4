@@ -35,7 +35,9 @@ document.querySelector("form").addEventListener("submit", (event) => {
         // }
 
         // ~~ went the long route at first. Adding new coin to #coinRow section
-        document.querySelector("#coinRow").innerHTML += `<div id="${coinData}" class="coin ${coinData}"><p class="${coinData}, para">${coinData}</p></div>`;
+        document.querySelector("#coinRow").innerHTML += `<div id="${coinData}" class="coin ${coinData}"></div>`;
+
+        // <p class="${coinData}, para">${coinData}</p>
 
 
 

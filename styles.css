@@ -1,5 +1,5 @@
 form{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     height: 200px;
     width: 400px;
     margin: auto;
@@ -44,26 +44,20 @@ form{
 }
 
 #Penny {
-    background:rgb(190, 106, 27);
-    background-image: linear-gradient(45deg, rgb(184,115,51), #935f42, #764c35, rgb(184,115,51));
+    background: url(lincoln-125x125.png), linear-gradient(45deg, rgb(184,115,51), #935f42, #764c35, rgb(184,115,51));
     border: solid 2px rgb(131, 76, 14);
     border-radius: 50%;
     height: 120px;
     width: 120px;
-    display: flex;
-    justify-content: center;
-   
+    
 }
 
 #Nickel {
-    background: rgb(158, 152, 152);
-    background-image: linear-gradient(65deg, silver, #727272, #807b78, silver);
+    background: url(jefferson-155x155.png);
     border: solid 2px rgb(121, 119, 119);
     border-radius: 50%;
     height: 150px;
     width: 150px;
-    display: flex;
-    justify-content: center;
 }
 
 #Dime {
@@ -88,13 +82,7 @@ form{
     justify-content: center;
 }
 
-.para, #Penny, #Nickel, #Dime, #Quarter {
-    align-self: center;
-    text-shadow: -1px -1px 1px rgb(206, 186, 186), 1px 1px 1px rgb(65, 52, 52);
-    color: #968b7f;
-    font-weight: 500;
-    
-}
+
 
 #coinRow {
     display: flex;
@@ -112,6 +100,8 @@ form{
     margin: auto;
     margin-top: 10px;
     display: block;
+    text-align: center;
+    padding-top: 30px;
 }
 
 @import "compass/css3";
