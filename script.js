@@ -35,11 +35,14 @@ document.querySelector("form").addEventListener("submit", (event) => {
         // }
 
         // ~~ went the long route at first. Adding new coin to #coinRow section
-        document.querySelector("#coinRow").innerHTML += `<div id="${coinData}" class="${coinData}"><p class="${coinData}, para">${coinData}</p></div>`;
+        document.querySelector("#coinRow").innerHTML += `<div id="${coinData}" class="coin ${coinData}"><p class="${coinData}, para">${coinData}</p></div>`;
 
 
-    } 
-    
+
+    }
+
+
+
 
     // ~~ Taz's code that I fit to my code.
     // total  += userNumber * coinValue;
@@ -61,39 +64,77 @@ document.querySelector("form").addEventListener("submit", (event) => {
                 total += 0.25;
                 console.log(total)
             }
-        } 
-        total = Math.round(100 * total)/100
-        console.log(total)    
+        }
+        total = Math.round(100 * total) / 100
+        console.log(total)
         document.querySelector("#total").innerHTML = "Total: $" + total.toFixed(2);
         // .toFixed(2) will round to two decimal places, leaving a 0 (e.g.: 0.10). But it is a string variable which is why I moved it to the final step.
-     } getTotal()
+    } getTotal()
 
-    
 
-    const newCoins = document.querySelectorAll("section#coinRow > div");
-    for (let coin of newCoins) {
-        coin.setAttribute("value", coinValue);
-    }
+
+
    
 
-    document.querySelector("section").addEventListener("click", (event) => {
-        if(event.target.localName === "div") {
-            event.target.remove();
-            total -= +(event.target.attributes.value.value);
+    // ~~ I was having trouble adding value = coinValue, like Taz's code, so I had to do a round about way to set the values for each coin
+    let pennies = document.querySelectorAll("section#coinRow > div#Penny");
+    for (let penny of pennies) {
+        penny.addEventListener("click", () => {
+            total -= 0.01;
+            penny.remove();
             console.log(total)
-        }
-    })
-              
-    //  for (let coin of newCoins) {
-    //     coin.setAttribute("value", coinValue);
-    //         let removeCoin = () => {
-    //             coin.remove(); 
-    //         }
+            document.querySelector("#total").innerHTML = "Total: $" + total.toFixed(2);
+            })
         
+    }
+
+    // ~~ could use method of target.classList.contains("class goes here")
+    let nickels = document.querySelectorAll("section#coinRow > div#Nickel");
+    for (let nickel of nickels) {
+        nickel.addEventListener("click", () => {
+            total -= 0.05;
+            total = Math.round(100 * total) / 100
+            nickel.remove();
+            console.log(total)
+            document.querySelector("#total").innerHTML = "Total: $" + total.toFixed(2);
+            })
+        
+    }
+
+    let dimes = document.querySelectorAll("section#coinRow > div#Dime");
+    for (let dime of dimes) {
+        dime.addEventListener("click", () => {
+            total -= 0.10;
+            total = Math.round(100 * total) / 100
+            dime.remove();
+            console.log(total)
+            document.querySelector("#total").innerHTML = "Total: $" + total.toFixed(2);
+            })
+        
+    }
+
+    let quarters = document.querySelectorAll("section#coinRow > div#Quarter");
+    for (let quarter of quarters) {
+        quarter.addEventListener("click", () => {
+            total -= 0.25;
+            total = Math.round(100 * total) / 100
+            quarter.remove();
+            console.log(total)
+            document.querySelector("#total").innerHTML = "Total: $" + total.toFixed(2);
+            })
+        
+    }
+  
+})
+  
+
+// RIP: Code Graveyard 
+
+  //     }
     //     coin.addEventListener("click", removeCoin)
 
         // function subtractFrom () {
-    
+
         //     if (coin.class === "Penny") {
         //         total = total - .01;
         //     } else if (coin.class === "Nickel") {
@@ -106,12 +147,12 @@ document.querySelector("form").addEventListener("submit", (event) => {
         //     console.log(total)
         //     document.querySelector("#total").innerHTML = "Total: $" + total;
         // } subtractFrom()
-                
+
     // }
 
 
     // function subtractFrom () {
-    
+
     //     if (coin.class === "Penny") {
     //         total = total - .01;
     //     } else if (coin.class === "Nickel") {
@@ -124,14 +165,6 @@ document.querySelector("form").addEventListener("submit", (event) => {
     //     console.log(total)
     //     document.querySelector("#total").innerHTML = "Total: $" + total;
     // } subtractFrom()
-    
-})
-   
 
-
-// RIP: Code Graveyard 
-
-
-   
 
 
