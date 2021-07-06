@@ -61,7 +61,7 @@ form{
 
 #Dime {
     background: url(fdr-105x105.png);
-    border: solid 2px darkgrey;
+    border: dashed 1px rgb(190, 188, 188);
     border-radius: 50%;
     height: 100px;
     width: 100px;
@@ -69,8 +69,8 @@ form{
 }
 
 #Quarter {
-    background: url(washington-200x200.png);
-    border: solid 2px rgb(102, 102, 102);
+    background: url(washington-205x205.png);
+    border: dashed 2px rgb(169, 171, 172);
     border-radius: 50%;
     height: 200px;
     width: 200px;
@@ -95,7 +95,7 @@ form{
     margin-top: 10px;
     display: block;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 35px;
 }
 
 @import "compass/css3";
